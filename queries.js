@@ -4,4 +4,4 @@ module.exports = {
     getAll() {
         return db.select().from('students')
     }
-}
+};
