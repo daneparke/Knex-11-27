@@ -9,12 +9,9 @@ exports.up = function (knex, Promise) {
         student.decimal('hometown_long')
         student.string('useless_superpower')
     })
-
 };
 
 //drops the table / remakes the table
 exports.down = function (knex, Promise) {
     return knex.schema.dropTableIfExists('students')
-
-
 };
