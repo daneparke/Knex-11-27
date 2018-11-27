@@ -4,7 +4,7 @@ module.exports = {
   development: {
     client: 'pg',
     connection: {
-      filename: 'postgresql://localhost/DATABASE_NAME_THAT_MAKES_SENSE_FOR_G102_DATABASE'
+      filename: 'postgresql://localhost/FIRST_DATABASE_102'
     },
     production: {
       client: 'pg',
