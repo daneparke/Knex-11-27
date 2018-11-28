@@ -17,8 +17,12 @@ app.get('/:id', (req, res) => {
     queries.getById(id).then(student => res.send(student))
 })
 
+// app.post('/', (req, res) => {
+//     queries.createStudent(req.body).then(res.status(201))
+// })
+
 app.post('/', (req, res) => {
-    queries.createStudent(req.body).then(res.status(201))
+    queries.createStudent(req.body).then(student => res.send(student[0]))
 })
 
 
