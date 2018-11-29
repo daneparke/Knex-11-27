@@ -27,7 +27,7 @@ app.delete('/:id', (req, res) => {
 })
 
 app.put('/:id', (req, res) => {
-    queries.updateStudent(req.params.id, req.body).then(data => res.json(data))
+    queries.updateStudent(req.params.id, req.body).then(updatedStudent => res.json(updatedStudent[0]))
 })
 
 app.use((req, res, next) => {
