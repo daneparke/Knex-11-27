@@ -26,6 +26,10 @@ app.delete('/:id', (req, res) => {
     queries.deleteStudent(id).then(res.status(204))
 })
 
+app.put('/:id', (req, res) => {
+    queries.updateStudent(req.params.id, req.body).then(data => res.json(data))
+})
+
 app.use((req, res, next) => {
     res.status(404).json({ message: 'Not found.' })
 })
